@@ -6,32 +6,28 @@ Este script de Python tiene como objetivo demostrar cómo la temperatura puede s
 
 ## Fórmulas Matemáticas
 
-La "temperatura" en esta simulación se calcula usando la desviación estándar (\( \sigma \)) de las velocidades (\( v \)) de las partículas:
+La "temperatura" en esta simulación se calcula usando la desviación estándar (sigma) de las velocidades (v) de las partículas:
 
-\[
-\sigma = \sqrt{\frac{\sum_{i=1}^{n} (v_i - \bar{v})^2}{n}}
-\]
+\`\`\`
+sigma = sqrt(sum((v_i - v_avg)^2) / n)
+\`\`\`
 
-Donde \( n \) es el número de partículas y \( \bar{v} \) es la velocidad media.
+Donde `n` es el número de partículas y `v_avg` es la velocidad media.
 
 ### Colisiones
 
 Cuando dos partículas colisionan, sus nuevas velocidades se determinan a partir de la velocidad media de ambas, añadiendo una fluctuación aleatoria:
 
-\[
-\text{new\_speed1} = \frac{\text{speed1} + \text{speed2}}{2} + \text{fluctuation}
-\]
-\[
-\text{new\_speed2} = \frac{\text{speed1} + \text{speed2}}{2} - \text{fluctuation}
-\]
+\`\`\`
+new_speed1 = (speed1 + speed2) / 2 + fluctuation
+new_speed2 = (speed1 + speed2) / 2 - fluctuation
+\`\`\`
 
-Donde \( \text{fluctuation} \) es un número aleatorio entre -2 y 2.
+Donde `fluctuation` es un número aleatorio entre -2 y 2.
 
 ## Irreductibilidad
 
 La irreductibilidad de las propiedades emergentes se refiere a la idea de que ciertas características de un sistema no pueden ser completamente explicadas o predichas mediante el análisis de sus componentes individuales. En este caso, la temperatura es una propiedad emergente porque cambia como resultado de las interacciones entre las partículas, y no puede ser simplemente deducida o predicha observando las partículas individualmente.
-
-En términos más filosóficos, esto resalta la naturaleza holística del sistema: el sistema como un todo tiene propiedades y comportamientos que no son aparentes cuando se examinan solo sus partes.
 
 ## Ejecución
 
